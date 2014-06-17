@@ -24,11 +24,11 @@ OBJS := main.o finder.o creator.o bridge.o
 
 fusemounts: $(OBJS)
 	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
-		
+
 .c.o:
 	$(CC) $(CFLAGS) -c -o $@ $<
-	
+
 clean:
 	rm -f $(OBJS)
-	
+
 .PHONY: clean
